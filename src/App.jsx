@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Button from "./components/button/Button";
 import UfoList from "./components/ufolist/UfoList";
+import MonsterContainer from "./components/monstercontainer/MonsterContainer";
 
 const App = () => {
   const [showList, setShowList] = useState(false);
@@ -33,6 +34,8 @@ const App = () => {
       {input > 18 ? <Button props={() => onClick()}></Button> : <></>}
 
       {showList ? <UfoList></UfoList> : <></>}
+
+      <MonsterContainer></MonsterContainer>
     </div>
   );
 };
