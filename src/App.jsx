@@ -4,12 +4,19 @@ import MonsterContainer from "./components/monsterContainer/MonsterContainer";
 import AgeCheck from "./components/ageCheck/AgeCheck";
 import MovieBox from "./components/movieBox/MovieBox";
 import Button from "./components/button/Button";
+import List from "./components/list/List";
 import { useState } from "react";
 
 const App = () => {
   const [selected, setSelected] = useState();
 
-  const data = ["Age-check 🐸", "Ufo-List 🛸", "Monster 👹", "Movies 🎬"];
+  const data = [
+    "Age-check 🐸",
+    "Ufo-List 🛸",
+    "Monster 👹",
+    "Movies 🎬",
+    "Animals 🐙",
+  ];
 
   function getContent() {
     switch (selected) {
@@ -21,6 +28,8 @@ const App = () => {
         return <MonsterContainer></MonsterContainer>;
       case "Movies 🎬":
         return <MovieBox></MovieBox>;
+      case "Animals 🐙":
+        return <List animals={["dog", "horse", "cow", "cat"]} ordered={true} />;
       default:
         break;
     }
