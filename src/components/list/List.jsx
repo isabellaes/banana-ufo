@@ -1,10 +1,8 @@
 const List = ({ animals, ordered }) => {
-  let array = animals.join(" ");
-  array = array.split(" ");
   if (ordered) {
     return (
       <ol>
-        {array.map((animal) => (
+        {animals.map((animal) => (
           <li key={animal}>{animal}</li>
         ))}
       </ol>
@@ -12,7 +10,7 @@ const List = ({ animals, ordered }) => {
   } else {
     return (
       <ul>
-        {array.map((animal) => (
+        {animals.map((animal) => (
           <li key={animal}>{animal}</li>
         ))}
       </ul>

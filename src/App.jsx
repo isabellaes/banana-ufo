@@ -7,6 +7,7 @@ import Button from "./components/button/Button";
 import List from "./components/list/List";
 import { useState } from "react";
 import DinoInfoBox from "./components/dinoInfoBox/DinoInfoBox";
+import AnimalList from "./components/animalListTwo/AnimalList";
 
 const App = () => {
   const [selected, setSelected] = useState();
@@ -23,6 +24,7 @@ const App = () => {
     "Monster 👹",
     "Movies 🎬",
     "Animals 🐙",
+    "Animals2 🐳",
     "Dino 🦕",
   ];
 
@@ -38,6 +40,8 @@ const App = () => {
         return <MovieBox></MovieBox>;
       case "Animals 🐙":
         return <List animals={["dog", "horse", "cow", "cat"]} ordered={true} />;
+      case "Animals2 🐳":
+        return <AnimalList animals={animals} ordered={true} onlyName={true} />;
       case "Dino 🦕":
         return (
           <DinoInfoBox
