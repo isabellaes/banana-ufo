@@ -27,7 +27,7 @@ const App = () => {
   }
   return (
     <div className="container">
-      <h1>🍌 BANANA-UFO Övningar med komponenter 🛸</h1>
+      <h1>🍌 BANANA-UFO Övningar 🛸</h1>
       <ul className="menu">
         {data.map((item) => (
           <li key={item}>

@@ -5,5 +5,5 @@ button {
 }
 
 button:hover {
-  background-color: var(--bole);
+  background-color: var(--rose-pink-light);
 }

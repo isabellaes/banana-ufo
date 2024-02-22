@@ -3,14 +3,17 @@ import movies from "../../../movie.json";
 import Movie from "../movie/Movie";
 const MovieBox = () => {
   return (
-    <div className="moviebox">
-      {movies.Movies.flatMap((movie) => (
-        <Movie
-          title={movie.title}
-          year={movie.year}
-          genre={movie.genre}
-        ></Movie>
-      ))}
+    <div className="movie-container">
+      <h2>Movies container 🎬</h2>
+      <div className="movie-box">
+        {movies.Movies.flatMap((movie) => (
+          <Movie
+            title={movie.title}
+            year={movie.year}
+            genre={movie.genre}
+          ></Movie>
+        ))}
+      </div>
     </div>
   );
 };
