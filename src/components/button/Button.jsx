@@ -1,7 +1,7 @@
 import "./button.css";
 
-const Button = ({ props }) => {
-  return <button onClick={props}>Toggle list</button>;
+const Button = ({ func, title }) => {
+  return <button onClick={func}>{title}</button>;
 };
 
 export default Button;

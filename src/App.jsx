@@ -1,41 +1,39 @@
-import { useState } from "react";
 import "./App.css";
-import Button from "./components/button/Button";
 import UfoList from "./components/ufolist/UfoList";
-import MonsterContainer from "./components/monstercontainer/MonsterContainer";
+import MonsterContainer from "./components/monsterContainer/MonsterContainer";
+import AgeCheck from "./components/ageCheck/AgeCheck";
+import Menu from "./components/menu/Menu";
+import Button from "./components/button/Button";
+import { useState } from "react";
 
 const App = () => {
-  const [showList, setShowList] = useState(false);
-  const [input, setInput] = useState(0);
-  function onClick() {
-    if (showList) {
-      setShowList(false);
-    } else {
-      setShowList(true);
-    }
-  }
+  const [selected, setSelected] = useState();
 
-  const age = 18;
-  function checkAge(age) {
-    if (age >= 18) {
-      return "Du är 18 år eller äldre";
-    } else {
-      return "Du är under 18";
+  const data = ["Age-check 🐸", "Ufo-List 🛸", "Monster 👹"];
+
+  function getContent() {
+    switch (selected) {
+      case "Age-check 🐸":
+        return <AgeCheck></AgeCheck>;
+      case "Ufo-List 🛸":
+        return <UfoList></UfoList>;
+      case "Monster 👹":
+        return <MonsterContainer></MonsterContainer>;
+      default:
+        break;
     }
   }
   return (
     <div className="container">
-      <h1>🍌 Hello World! 🛸</h1>
-      <input
-        onChange={(e) => setInput(Number(e.currentTarget.value))}
-        placeholder="Enter age"
-      ></input>
-      {input ? <p>{checkAge(input)}</p> : <></>}
-      {input > 18 ? <Button props={() => onClick()}></Button> : <></>}
-
-      {showList ? <UfoList></UfoList> : <></>}
-
-      <MonsterContainer></MonsterContainer>
+      <h1>🍌 BANANA-UFO Övningar med komponenter 🛸</h1>
+      <ul className="menu">
+        {data.map((item) => (
+          <li key={item}>
+            <Button func={() => setSelected(item)} title={item}></Button>
+          </li>
+        ))}
+      </ul>
+      <div>{getContent()}</div>
     </div>
   );
 };
