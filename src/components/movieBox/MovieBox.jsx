@@ -11,6 +11,7 @@ const MovieBox = () => {
             title={movie.title}
             year={movie.year}
             genre={movie.genre}
+            img={movie.img}
           ></Movie>
         ))}
       </div>
