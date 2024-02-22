@@ -2,14 +2,14 @@ import "./App.css";
 import UfoList from "./components/ufolist/UfoList";
 import MonsterContainer from "./components/monsterContainer/MonsterContainer";
 import AgeCheck from "./components/ageCheck/AgeCheck";
-import Menu from "./components/menu/Menu";
+import MovieBox from "./components/movieBox/MovieBox";
 import Button from "./components/button/Button";
 import { useState } from "react";
 
 const App = () => {
   const [selected, setSelected] = useState();
 
-  const data = ["Age-check 🐸", "Ufo-List 🛸", "Monster 👹"];
+  const data = ["Age-check 🐸", "Ufo-List 🛸", "Monster 👹", "Movies 🎬"];
 
   function getContent() {
     switch (selected) {
@@ -19,6 +19,8 @@ const App = () => {
         return <UfoList></UfoList>;
       case "Monster 👹":
         return <MonsterContainer></MonsterContainer>;
+      case "Movies 🎬":
+        return <MovieBox></MovieBox>;
       default:
         break;
     }

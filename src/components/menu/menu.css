@@ -1,7 +1,0 @@
-.menu {
-  display: flex;
-  flex-direction: row;
-  padding: 1em;
-  border-bottom: 1px solid black;
-  list-style-type: none;
-}
