@@ -6,9 +6,16 @@ import MovieBox from "./components/movieBox/MovieBox";
 import Button from "./components/button/Button";
 import List from "./components/list/List";
 import { useState } from "react";
+import DinoInfoBox from "./components/dinoInfoBox/DinoInfoBox";
 
 const App = () => {
   const [selected, setSelected] = useState();
+
+  const animals = [
+    { name: "Horse", legs: 4 },
+    { name: "Spider", legs: 8 },
+    { name: "Snake", legs: 0 },
+  ];
 
   const data = [
     "Age-check 🐸",
@@ -16,6 +23,7 @@ const App = () => {
     "Monster 👹",
     "Movies 🎬",
     "Animals 🐙",
+    "Dino 🦕",
   ];
 
   function getContent() {
@@ -30,6 +38,20 @@ const App = () => {
         return <MovieBox></MovieBox>;
       case "Animals 🐙":
         return <List animals={["dog", "horse", "cow", "cat"]} ordered={true} />;
+      case "Dino 🦕":
+        return (
+          <DinoInfoBox
+            name={"Diplodocus"}
+            discoveryYear={"1878"}
+            period={"Jurassic"}
+            length={"25 meters"}
+            weight={"13 tons"}
+            image={
+              "https://upload.wikimedia.org/wikipedia/commons/f/f7/Misty_Diplodocus.jpg"
+            }
+            reverse={false}
+          ></DinoInfoBox>
+        );
       default:
         break;
     }

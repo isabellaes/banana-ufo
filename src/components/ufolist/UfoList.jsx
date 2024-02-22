@@ -2,7 +2,7 @@ import "./ufolist.css";
 
 const UfoList = () => {
   return (
-    <ul>
+    <ul className="ufo-list">
       <li>Millennium Falcon</li>
       <li>USS Enterprise</li>
       <li>TARDIS</li>

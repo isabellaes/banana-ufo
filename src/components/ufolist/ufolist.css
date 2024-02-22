@@ -1,8 +1,8 @@
-ul {
+.ufo-list {
   list-style-type: square;
 }
 
-li {
+.ufo-list li {
   padding: 5px;
 
   &.color {

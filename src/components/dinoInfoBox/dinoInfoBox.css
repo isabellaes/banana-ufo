@@ -1,0 +1,31 @@
+.dino-info-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aliceblue;
+  min-width: 15em;
+  height: fit-content;
+  border: 2px solid black;
+}
+
+.dino-info-box img {
+  width: 10em;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.info p,
+.info h3 {
+  line-height: 1px;
+}
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}

@@ -8,12 +8,12 @@
   border-radius: 2px;
 }
 
-img {
+.movie-card img {
   height: fit-content;
   width: 10em;
 }
 
-h3,
-p {
+.movie-card h3,
+.movie-card p {
   text-align: center;
 }
