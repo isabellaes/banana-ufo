@@ -2,8 +2,9 @@ const AnimalList = ({ animals, ordered, onlyName }) => {
   if (ordered && onlyName) {
     return (
       <ol>
+        <h2>Ordered list and names only</h2>
         {animals.map((animal) => (
-          <li>
+          <li key={animal.name}>
             <p>{animal.name}</p>
           </li>
         ))}
@@ -12,8 +13,9 @@ const AnimalList = ({ animals, ordered, onlyName }) => {
   } else if (ordered) {
     return (
       <ol>
+        <h2>Ordered list</h2>
         {animals.map((animal) => (
-          <li>
+          <li key={animal.name}>
             <p>{animal.name}</p>
             <p>Legs: {animal.legs}</p>
           </li>
@@ -21,22 +23,28 @@ const AnimalList = ({ animals, ordered, onlyName }) => {
       </ol>
     );
   } else if (onlyName) {
-    <ul>
-      {animals.map((animal) => (
-        <li>
-          <p>{animal.name}</p>
-        </li>
-      ))}
-    </ul>;
+    return (
+      <ul>
+        <h2>Unordered list and names only</h2>
+        {animals.map((animal) => (
+          <li key={animal.name}>
+            <p>{animal.name}</p>
+          </li>
+        ))}
+      </ul>
+    );
   } else {
-    <ul>
-      {animals.map((animal) => (
-        <li>
-          <p>{animal.name}</p>
-          <p>Legs: {animal.legs}</p>
-        </li>
-      ))}
-    </ul>;
+    return (
+      <ul>
+        <h2>Unordered list</h2>
+        {animals.map((animal) => (
+          <li key={animal.name}>
+            <p>{animal.name}</p>
+            <p>Legs: {animal.legs}</p>
+          </li>
+        ))}
+      </ul>
+    );
   }
 };
 

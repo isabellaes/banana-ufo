@@ -39,22 +39,45 @@ const App = () => {
       case "Movies 🎬":
         return <MovieBox></MovieBox>;
       case "Animals 🐙":
-        return <List animals={["dog", "horse", "cow", "cat"]} ordered={true} />;
+        return (
+          <>
+            <List animals={["dog", "horse", "cow", "cat"]} ordered={true} />
+            <List animals={["dog", "horse", "cow", "cat"]} ordered={false} />
+          </>
+        );
       case "Animals2 🐳":
-        return <AnimalList animals={animals} ordered={true} onlyName={true} />;
+        return (
+          <>
+            <AnimalList animals={animals} ordered={false} onlyName={false} />
+            <AnimalList animals={animals} ordered={true} onlyName={true} />
+          </>
+        );
       case "Dino 🦕":
         return (
-          <DinoInfoBox
-            name={"Diplodocus"}
-            discoveryYear={"1878"}
-            period={"Jurassic"}
-            length={"25 meters"}
-            weight={"13 tons"}
-            image={
-              "https://upload.wikimedia.org/wikipedia/commons/f/f7/Misty_Diplodocus.jpg"
-            }
-            reverse={false}
-          ></DinoInfoBox>
+          <>
+            <DinoInfoBox
+              name={"Diplodocus"}
+              discoveryYear={"1878"}
+              period={"Jurassic"}
+              length={"25 meters"}
+              weight={"13 tons"}
+              image={
+                "https://upload.wikimedia.org/wikipedia/commons/f/f7/Misty_Diplodocus.jpg"
+              }
+              reverse={false}
+            ></DinoInfoBox>
+            <DinoInfoBox
+              name={"Diplodocus"}
+              discoveryYear={"1878"}
+              period={"Jurassic"}
+              length={"25 meters"}
+              weight={"13 tons"}
+              image={
+                "https://upload.wikimedia.org/wikipedia/commons/f/f7/Misty_Diplodocus.jpg"
+              }
+              reverse={true}
+            ></DinoInfoBox>
+          </>
         );
       default:
         break;

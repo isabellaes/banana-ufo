@@ -16,7 +16,7 @@ const AgeCheck = () => {
         onChange={(e) => setInput(Number(e.currentTarget.value))}
         placeholder="Enter age"
       ></input>
-      {input ? <p>{checkAge(input)}</p> : <p>{checkAge(age)}</p>}
+      {input ? <p>{checkAge(input)}</p> : <p>Enter age to check</p>}
     </>
   );
 };

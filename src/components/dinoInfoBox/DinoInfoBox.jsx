@@ -11,29 +11,35 @@ const DinoInfoBox = ({
 }) => {
   if (reverse) {
     return (
-      <div className="dino-info-box">
-        <img src={image} alt="dino-img" />
-        <div className="info">
-          <h3>{name}</h3>
-          <p>{discoveryYear}</p>
-          <p>{period}</p>
-          <p>{length}</p>
-          <p>{weigth}</p>
+      <>
+        <h2>Img left</h2>
+        <div className="dino-info-box">
+          <img src={image} alt="dino-img" />
+          <div className="info">
+            <h3>{name}</h3>
+            <p>{discoveryYear}</p>
+            <p>{period}</p>
+            <p>{length}</p>
+            <p>{weigth}</p>
+          </div>
         </div>
-      </div>
+      </>
     );
   } else {
     return (
-      <div className="dino-info-box">
-        <div className="info">
-          <h3>{name}</h3>
-          <p>{discoveryYear}</p>
-          <p>{period}</p>
-          <p>{length}</p>
-          <p>{weigth}</p>
+      <>
+        <h2>Img right</h2>
+        <div className="dino-info-box">
+          <div className="info">
+            <h3>{name}</h3>
+            <p>{discoveryYear}</p>
+            <p>{period}</p>
+            <p>{length}</p>
+            <p>{weigth}</p>
+          </div>
+          <img src={image} alt="dino-img" />
         </div>
-        <img src={image} alt="dino-img" />
-      </div>
+      </>
     );
   }
 };
